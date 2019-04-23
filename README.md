@@ -1,4 +1,4 @@
-EAT-DA-BURGER
+EAT-DA-BURGER APPLICATION
 
 Welcome to the eat the burger application! This is a node Express app using mysql as a database and handlebar to serve as the html.page. Just being one html page, the user still gets to interact with the application.
 
