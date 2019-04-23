@@ -1,14 +1,17 @@
 <div class="container">
 
     <div class="jumbotron">
-        <h1>Order Your Burger </h1>
-        <p>Burger Orders for Pickup.</p>
+        <h1>Eat-Da-Burger</h1>
         <br>
-        <h2>Select a Burger or Sandwich</h2>
+        <p>Watch your order be placed and populate on the right side!
+        <br> To eat your burger simply select the devour button, 
+        <br>and watch it move to the left side!
+        </p>
+        <img src="../assets/images/burgericon.png" alt="burger transparent bg">
         <panel>
             <form class="create-form">
                 <div class="form-group">
-                    <label for="newburger">Order Fresh Burger</label>
+                    {{!-- <label for="newburger">Order Fresh Burger</label> --}}
                     {{!-- <input type="text" id="newburger" name="burger"> --}}
                     <select data-placeholder="" id="newburger" name="burger">
                         <option value="Nothing Selected" selected>Please Select a Sandwich</option>
@@ -21,9 +24,7 @@
                         <option value="SteaknChz">Steak and Cheese Sandwich</option>
                     </select>
 
-                    <button type="submit" class="btn btn-success" id="addburger">
-                        <span class="fa fa-thumbs-up"></span>
-                    </button>
+                    <button type="submit" class="btn btn-success">Burger me up!<id="addburger"></button> 
                 </div>
             </form>
         </panel>
@@ -31,8 +32,7 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="panel panel-default">
-                <div class="panel-heading" id="leftside"><strong>Order Your Burger</strong>
-                    <p>Send order to cashier when ready for pick up</p>
+                <div class="panel-heading" id="leftside"><strong>Burger Orders Up!</strong>
                 </div>
                 <div class="panel-body">
 
@@ -42,7 +42,7 @@
 
                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
                         <button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
-                            data-newDevoured="{{devour}}"><span class="fa fa-usd"></span></button>
+                            data-newDevoured="{{devour}}">Devour it</button>
                         <hr>
                         {{/unless}}
                         {{/each}}
@@ -53,8 +53,7 @@
         </div>
         <div class="col-sm-6">
             <div class="panel panel-default">
-                <div class="panel-heading" id="rightside"><strong>Burger is Ready for Pick Up</strong>
-                    <p>Remove order from pick up when delivered</p>
+                <div class="panel-heading" id="rightside"><strong>Devoured Burgers!</strong>
                 </div>
                 <div class="panel-body">
                     <ul>
