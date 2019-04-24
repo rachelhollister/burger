@@ -3,25 +3,21 @@
     <div class="jumbotron">
         <h1>Eat-Da-Burger</h1>
         <br>
-        <p>Watch your order be placed and populate on the right side!
-        <br> To eat your burger simply select the devour button, 
-        <br>and watch it move to the left side!
+        <p>Watch your order be placed and populate on the left side!
+        <br> To devour your burger simply select the button, 
+        <br>and watch it move to the right side!
         </p>
         <img src="../assets/images/burgericon.png" alt="burger transparent bg">
         <panel>
             <form class="create-form">
                 <div class="form-group">
-                    {{!-- <label for="newburger">Order Fresh Burger</label> --}}
-                    {{!-- <input type="text" id="newburger" name="burger"> --}}
                     <select data-placeholder="" id="newburger" name="burger">
-                        <option value="Nothing Selected" selected>Please Select a Sandwich</option>
-                        <option value="Hamburger">Hamburger</option>
-                        <option value="CheeseBurger">CheeseBurger</option>
-                        <option value="DoubleBfChz">Double Up (double meat and cheese)</option>
-                        <option value="VeggieBurger">Veggie Burger</option>
-                        <option value="PulledPork">Pulled Pork Sandwich</option>
-                        <option value="ChichenClub">Chicken Club Sandwich</option>
-                        <option value="SteaknChz">Steak and Cheese Sandwich</option>
+                        <option value="None Chosen" selected>Choose Da Burger</option>
+                        <option value="Guacamole Burger">Guacamole Burger</option>
+                        <option value="Retro Hamburger">Retro Hamburger</option>
+                        <option value="Cheese Burger">Cheese Burger</option>
+                        <option value="Western Bacon Burger">Western Bacon Burger</option>
+                        <option value="Turkey Burger">Turkey Burger</option>
                     </select>
 
                     <button type="submit" class="btn btn-success">Burger me up!<id="addburger"></button> 
@@ -61,7 +57,7 @@
                         {{#if devoured}}
                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
                         <button type="button" class="trashburger btn btn-danger" id="trashbutton" data-id="{{this.id}}"
-                            data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button>
+                            data-newDevoured="{{devour}}">Clear Orders</button>
                         <hr>
                         {{/if}}
                         {{/each}}
@@ -74,6 +70,4 @@
         </div>
 
     </div>
-    <!--endrow -->
 </div>
-<!--endcontainer -->
